@@ -2,16 +2,18 @@
 
 void print_python_list_info(PyObject *p)
 {
-    long int size = PyList_Size(p);
-    int i;
+    long int list_size = PyList_Size(p);
+    int index = 0;
+    PyListObject *list_obj = (PyListObject *)p;
 
-    printf("[*] Size of the Python List = %li\n", size);
+    printf("[*] Size of the Python List = %li\n", list_size);
+
+    // Avoid displaying 'allocated' to prevent potential cheating.
     
-    // Avoid displaying internal details like 'allocated' to prevent cheating.
-    
-    for (i = 0; i < size; i++)
+    while (index < list_size)
     {
-        PyObject *item = PyList_GetItem(p, i);
-        printf("Element %i: %s\n", i, Py_TYPE(item)->tp_name);
+        PyObject *item = PyList_GetItem(p, index);
+        printf("Element %i: %s\n", index, Py_TYPE(item)->tp_name);
+        index++;
     }
 }
