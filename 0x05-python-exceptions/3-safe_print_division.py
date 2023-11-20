@@ -9,5 +9,5 @@ def safe_print_division(a, b):
     except (ZeroDivisionError, TypeError):
         pass
     finally:
-        print("Inside result: {}".format(div))
+        print("Inside result: {}".format(divide))
         return divide
