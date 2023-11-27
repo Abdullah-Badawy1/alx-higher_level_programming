@@ -3,10 +3,11 @@
 
 This module defines a Rectangle class with added functionality to output a
 string representation of the rectangle using the `__str__` method. It includes
-methods for setting and getting the width and height with appropriate validations
+methods for setting and getting the width and height  appropriate validations
 and methods to calculate the area and perimeter of the rectangle.
 
 """
+
 
 class Rectangle:
     """A class representing a rectangle.
@@ -40,7 +41,7 @@ class Rectangle:
     def width(self):
         """int: Gets or sets the width of the rectangle.
 
-        The setter validates that the width is an integer and not less than 0.
+        The setter validates that the width is an integer and not less than0.
 
         Raises:
             TypeError: If `value` is not an integer.
@@ -69,7 +70,7 @@ class Rectangle:
     def height(self):
         """int: Gets or sets the height of the rectangle.
 
-        The setter validates that the height is an integer and not less than 0.
+        The setter validates that the height is an integer and not lessthan0.
 
         Raises:
             TypeError: If `value` is not an integer.
@@ -112,7 +113,7 @@ class Rectangle:
         Returns 0 if either width or height is 0.
 
         Returns:
-            int: The perimeter of the rectangle, or 0 if width or height is 0.
+            int: The perimeter of the rectangle, or 0 if width or height is0.
 
         """
         if self.__width == 0 or self.__height == 0:
@@ -120,14 +121,15 @@ class Rectangle:
         return (self.__width * 2) + (self.__height * 2)
 
     def _draw_rectangle(self):
-        """Constructs a string representation of the rectangle using '#' characters.
+        """Constructs a string representation of the rectangle using '#'
+        characters.
 
         The method loops through the height and width of the rectangle and
         constructs a string of '#' characters representing the shape of the
         rectangle.
 
         Returns:
-            str: A string representation of the rectangle, suitable for printing.
+            str: A string representation the rectangle, suitable for printing.
 
         """
         rectangle_str = ""

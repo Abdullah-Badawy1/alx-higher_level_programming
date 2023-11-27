@@ -3,10 +3,11 @@
 
 This module defines a Rectangle class. The Rectangle class, at this stage,
 is designed to initialize a rectangle object with private width and height
-attributes. It includes property setters and getters to manage these attributes,
+attributes. It includes property setters and getters manage these attributes,
 ensuring that they adhere to specific type and value constraints.
 
 """
+
 
 class Rectangle:
     """A class that defines a rectangle.
@@ -20,15 +21,15 @@ class Rectangle:
         __height (int): The height of the rectangle, initialized to 0.
 
     Args:
-        width (int, optional): The initial width of the rectangle. Defaults to 0.
-        height (int, optional): The initial height of the rectangle. Defaults to 0.
+        width (int, optional): The initial width of rectangle. Defaults to 0.
+        height (int, optional): The initial height of rectanglDefaults to 0.
 
     """
 
     def __init__(self, width=0, height=0):
         """Initializes a new Rectangle instance.
 
-        The initialization involves setting the width and height of the rectangle.
+        The initialization involves setting the width and height rectangle.
         The property setters are used to apply the necessary validations.
 
         Args:
@@ -72,7 +73,7 @@ class Rectangle:
     def height(self):
         """int: Gets or sets the height of the rectangle.
 
-        The setter validates that the height is an integer and not less than 0.
+        The setter validates that the height is an integer not less than 0.
 
         Raises:
             TypeError: If `value` is not an integer.

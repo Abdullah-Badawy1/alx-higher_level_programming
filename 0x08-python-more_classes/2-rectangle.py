@@ -7,11 +7,12 @@ the width and height with appropriate validations.
 
 """
 
+
 class Rectangle:
     """A class representing a rectangle.
 
     This class provides functionalities for calculating the area and perimeter
-    of a rectangle. It handles the initialization of width and height attributes
+    of a rectangle. It handles the initialization width and height attributes
     with appropriate type and value validations.
 
     Attributes:
@@ -19,8 +20,8 @@ class Rectangle:
         __height (int): The height of the rectangle, initialized to 0.
 
     Args:
-        width (int, optional): The initial width of the rectangle. Defaults to 0.
-        height (int, optional): The initial height of the rectangle. Defaults to 0.
+        width (int, optional): The initial width of the rectangle.
+        height (int, optional):initial height of the rectangle. Defaults to 0.
 
     """
 
@@ -42,7 +43,7 @@ class Rectangle:
     def width(self):
         """int: Gets or sets the width of the rectangle.
 
-        The setter validates that the width is an integer and not less than 0.
+        The setter validates that the width is integer and not less than 0.
 
         Raises:
             TypeError: If `value` is not an integer.
@@ -71,7 +72,8 @@ class Rectangle:
     def height(self):
         """int: Gets or sets the height of the rectangle.
 
-        The setter validates that the height is an integer and not less than 0.
+        The setter validates that the height
+        is an integer and not less than 0.
 
         Raises:
             TypeError: If `value` is not an integer.

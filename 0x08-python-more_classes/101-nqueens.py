@@ -2,7 +2,7 @@
 """
 Module 101-nqueens provides a solution to the N queens puzzle using an
 iterative approach with enhanced efficiency and readability. The program finds
-all possible solutions, including translations and reflections, for the N queens
+all possible solutions,including translations and reflections, for the queens
 puzzle.
 
 Attributes:

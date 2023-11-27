@@ -7,6 +7,7 @@ __repr__) and a custom deletion message (__del__).
 
 """
 
+
 class Rectangle:
     """A class for representing a rectangle.
 
@@ -112,7 +113,7 @@ class Rectangle:
         Returns 0 if either width or height is 0.
 
         Returns:
-            int: The perimeter of the rectangle, or 0 if width or height is 0.
+            int: The perimeter of the rectangle, or 0 if width or height is0.
 
         """
         if self.__width == 0 or self.__height == 0:
@@ -120,7 +121,8 @@ class Rectangle:
         return (self.__width * 2) + (self.__height * 2)
 
     def _draw_rectangle(self):
-        """Creates a string representation of the rectangle using '#' characters.
+        """Creates a string representation of the rectangle using
+        '#' characters.
 
         Forms a string of '#' characters that depicts the rectangle's shape
         according to its dimensions.
@@ -149,7 +151,8 @@ class Rectangle:
         return self._draw_rectangle()
 
     def __repr__(self):
-        """Provides a string representation of the Rectangle instance for eval().
+        """Provides a string representation of
+        the Rectangle instance for eval().
 
         Returns a string of code that can recreate the current instance.
 

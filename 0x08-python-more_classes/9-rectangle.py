@@ -2,11 +2,13 @@
 """Module 9-rectangle for Holberton Python project 0x08 task 9.
 
 This module defines a Rectangle class with advanced functionalities including
-methods to calculate area, perimeter, string representations (__str__, __repr__),
+methods to calculate area, perimeter,
+string representations (__str__, __repr__),
 a custom deletion message (__del__), a static method to compare the size of
 two Rectangle instances, and a class method to create a square.
 
 """
+
 
 class Rectangle:
     """A class for representing a rectangle.
@@ -129,9 +131,10 @@ class Rectangle:
         return (self.__width * 2) + (self.__height * 2)
 
     def _draw_rectangle(self):
-        """Creates a string representation of the rectangle using `print_symbol`.
+        """Creates a string representation of
+        the rectangle using `print_symbol`.
 
-        Forms a string using the `print_symbol` to depict the rectangle's shape.
+        Forms a string using the `print_symbol`depict the rectangle's shape.
 
         Returns:
             str: A string representation of the rectangle.
@@ -156,7 +159,8 @@ class Rectangle:
         return self._draw_rectangle()
 
     def __repr__(self):
-        """Provides a string representation of the Rectangle instance for eval().
+        """Provides a string representation of
+        the Rectangle instance for eval().
 
         Returns a string of code that can recreate the current instance.
 
@@ -167,7 +171,8 @@ class Rectangle:
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Prints a message upon deletion of a Rectangle instance and decrements `number_of_instances`.
+        """Prints a message upon deletion of a Rectangle
+        instance and decrements `number_of_instances`.
 
         Reduces the class-level instance counter and prints a custom message
         when an instance is deleted.

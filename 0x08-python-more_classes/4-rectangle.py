@@ -7,6 +7,7 @@ of the rectangle.
 
 """
 
+
 class Rectangle:
     """A class for representing a rectangle.
 
@@ -143,7 +144,7 @@ class Rectangle:
     def __str__(self):
         """Enables direct printing of Rectangle instances.
 
-        Uses _draw_rectangle to create a string representation of the rectangle.
+        Uses _draw_rectangle to create string representation of the rectangle
 
         Returns:
             str: The output of _draw_rectangle, suitable for printing.

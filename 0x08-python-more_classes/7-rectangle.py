@@ -7,6 +7,7 @@ string representation of the rectangle.
 
 """
 
+
 class Rectangle:
     """A class for representing a rectangle.
 
@@ -129,7 +130,8 @@ class Rectangle:
         return (self.__width * 2) + (self.__height * 2)
 
     def _draw_rectangle(self):
-        """Creates a string representation of the rectangle using `print_symbol`.
+        """Creates a string representation of the rectangle using
+        `print_symbol`.
 
         Forms a string using the `print_symbol` to depict the rectangle's shape
         based on its dimensions.
@@ -149,7 +151,7 @@ class Rectangle:
     def __str__(self):
         """Enables direct printing of Rectangle instances.
 
-        Uses _draw_rectangle to create a string representation of the rectangle.
+        Uses _draw_rectangle create a string representation of the rectangle.
 
         Returns:
             str: The output of _draw_rectangle, suitable for printing.
@@ -158,7 +160,8 @@ class Rectangle:
         return self._draw_rectangle()
 
     def __repr__(self):
-        """Provides a string representation of the Rectangle instance for eval().
+        """Provides a string representation of
+        the Rectangle instance for eval().
 
         Returns a string of code that can recreate the current instance.
 
@@ -169,7 +172,8 @@ class Rectangle:
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Prints a message upon deletion of a Rectangle instance and decrements `number_of_instances`.
+        """Prints a message upon deletion of a Rectangle instance
+        and decrements `number_of_instances`.
 
         Reduces the class-level instance counter and prints a custom message
         when an instance is deleted.

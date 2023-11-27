@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 """Module 8-rectangle for Holberton Python project 0x08 task 8.
 
-This module defines a Rectangle class with comprehensive functionality including
-methods to calculate area, perimeter, string representations (__str__, __repr__),
-a custom deletion message (__del__), and a static method to compare the size of
+This module defines a Rectangle classcomprehensive functionality including
+methods to calculate area, perimeter, representations (__str__, __repr__),
+a custom deletion message (__del__), and a static to compare the size of
 two Rectangle instances.
 
 """
 
+
 class Rectangle:
     """A class for representing a rectangle.
-
-    This class includes comprehensive functionalities such as calculating area
-    and perimeter, customizable string representations, tracking the number of
+    This class includes comprehensive functionalities such as calculatingarea
+    and perimeter, customizable string representations, tracking thenumber of
     instances, and a method to compare the sizes of two Rectangle instances.
 
     Class Attributes:
@@ -128,9 +128,9 @@ class Rectangle:
         return (self.__width * 2) + (self.__height * 2)
 
     def _draw_rectangle(self):
-        """Creates a string representation of the rectangle using `print_symbol`.
+        """Creates a string representation oftherectangle using `print_symbol'
 
-        Forms a string using the `print_symbol` to depict the rectangle's shape.
+        Forms a string using the `print_symbol`depict the rectangle's shape.
 
         Returns:
             str: A string representation of the rectangle.
@@ -155,7 +155,7 @@ class Rectangle:
         return self._draw_rectangle()
 
     def __repr__(self):
-        """Provides a string representation of the Rectangle instance for eval().
+        """Provides a string representation of the Rectangle instance eval().
 
         Returns a string of code that can recreate the current instance.
 
@@ -166,7 +166,8 @@ class Rectangle:
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Prints a message upon deletion of a Rectangle instance and decrements `number_of_instances`.
+        """Prints a message upon deletion of Rectangle instance and decrements
+        `number_of_instances`.
 
         Reduces the class-level instance counter and prints a custom message
         when an instance is deleted.

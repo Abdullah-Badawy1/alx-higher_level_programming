@@ -8,13 +8,16 @@ a custom deletion message (__del__).
 
 """
 
+
 class Rectangle:
     """A class for representing a rectangle.
 
     This class extends the Rectangle functionalities by maintaining a count of
     the number of instances created and deleted. It provides methods for
-    calculating the area and perimeter, and mechanisms to represent the object
-    as a string for printing or as a string of code that can recreate the object.
+    calculating the area and perimeter,
+    and mechanisms to represent the object
+    as a string for printing or as a string of code
+    that can recreate the object.
 
     Class Attributes:
         number_of_instances (int): The count of Rectangle instances.
@@ -126,7 +129,8 @@ class Rectangle:
         return (self.__width * 2) + (self.__height * 2)
 
     def _draw_rectangle(self):
-        """Creates a string representation of the rectangle using '#' characters.
+        """Creates a string representation of
+        the rectangle using '#' characters.
 
         Forms a string of '#' characters depicting the rectangle's shape
         based on its dimensions.
@@ -146,7 +150,8 @@ class Rectangle:
     def __str__(self):
         """Enables direct printing of Rectangle instances.
 
-        Uses _draw_rectangle to create a string representation of the rectangle.
+        Uses _draw_rectangle to create
+        a string representation of the rectangle.
 
         Returns:
             str: The output of _draw_rectangle, suitable for printing.
@@ -155,7 +160,8 @@ class Rectangle:
         return self._draw_rectangle()
 
     def __repr__(self):
-        """Provides a string representation of the Rectangle instance for eval().
+        """Provides a string representation of
+        the Rectangle instance for eval().
 
         Returns a string of code that can recreate the current instance.
 
@@ -167,7 +173,8 @@ class Rectangle:
 
     @classmethod
     def __del__(cls):
-        """Decrements `number_of_instances` and prints a message upon instance deletion.
+        """Decrements `number_of_instances` and prints a
+        message upon instance deletion.
 
         Reduces the class-level instance counter and prints a custom message
         when an instance is deleted.
