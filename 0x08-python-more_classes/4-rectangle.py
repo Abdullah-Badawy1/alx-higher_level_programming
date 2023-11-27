@@ -118,36 +118,43 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * 2) + (self.__height * 2)
+ def _draw_rectangle(self):
+        """Formats a string of '#' and '\n' chars to print the rectangle
+        represented by the current instance.
 
-    def _draw_rectangle(self):
-        """Creates a string representation of the rectangle.
-
-        Constructs a string of '#' characters that represents the rectangle's
-        shape, using the dimensions of width and height.
+        Attributes:
+            __width (int): horizontal dimension of rectangle
+            __height (int): vertical dimension of rectangle
+            str (str): string to constructed for return
 
         Returns:
-            str: A string representation of the rectangle.
+            str (str): string suitable for printing rectangle (final newline
+            omitted)
 
         """
-        rectangle_str = ""
-        row = 0
-        while row < self.__height:
-            col = 0
-            while col < self.__width:
-                rectangle_str += '#'
-                col += 1
-            if self.__width != 0 and row < self.__height - 1:
-                rectangle_str += '\n'
-            row += 1
-        return rectangle_str
+        str = ""
+        for row in range(self.__height):
+            for col in range(self.__width):
+                str += '#'
+            if self.__width != 0 and row < (self.__height - 1):
+                str += '\n'
+        return str
 
     def __str__(self):
-        """Enables direct printing of Rectangle instances.
-
-        Uses _draw_rectangle to create string representation of the rectangle
+        """Allows direct printing of instances.
 
         Returns:
-            str: The output of _draw_rectangle, suitable for printing.
+            The output of _draw_rectangle, which creates a string
+        representation of the rectangle suitable for printing.
 
         """
         return self._draw_rectangle()
+
+    def __repr__(self):
+        """Allows use of eval().
+
+        Returns:
+            A string of the code needed to create the instance.
+
+        """
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
