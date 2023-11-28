@@ -1,26 +1,17 @@
 #!/usr/bin/python3
-"""Module built for Python 0x07 task 0.
-"""
+"""Defines an integer addition function."""
 
 
 def add_integer(a, b=98):
-    """Function that adds two integers.
+    """Return the integer addition of a and b.
 
-    Args:
-        a ((int, (float)): first arg to add to sum.
-        b ((int, (float)): second arg to add to sum. Defaults to 98.
+    Float arguments are typecasted to ints before addition is performed.
 
-    Returns: sum of both values.
-
+    Raises:
+        TypeError: If either of a or b is a non-integer and non-float.
     """
-    if type(a) is float:
-        a = int(a)
-    elif type(a) is not int:
-        raise TypeError('a must be an integer')
-
-    if type(b) is float:
-        b = int(b)
-    elif type(b) is not int:
-        raise TypeError('b must be an integer')
-
-    return a + b
+    if ((not isinstance(a, int) and not isinstance(a, float))):
+        raise TypeError("a must be an integer")
+    if ((not isinstance(b, int) and not isinstance(b, float))):
+        raise TypeError("b must be an integer")
+    return (int(a) + int(b))
