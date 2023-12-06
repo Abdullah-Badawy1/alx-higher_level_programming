@@ -1,14 +1,20 @@
 #!/usr/bin/python3
-"""Module containing function to save python object in json format"""
+"""
+7-add_item module
+"""
+import sys
 import json
+import os.path
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
+file = "add_item.json"
+json_list = []
 
-def save_to_json_file(my_obj, filename):
-    """Convert `my_obj` to json string and save to `filename`
+if os.path.exists(file):
+    json_list = load_from_json_file(file)
 
-    Args:
-        my_obj: serializable object to convert to json
-        filename (str): file to save json string to
-    """
-    with open(filename, 'w') as f:
-        json.dump(my_obj, f)
+for i in range(1, len(sys.argv)):
+    json_list.append(sys.argv[i])
+
+save_to_json_file(json_list, file)
