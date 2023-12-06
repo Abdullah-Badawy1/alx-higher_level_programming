@@ -1,15 +1,18 @@
 #!/usr/bin/python3
-"""Module implementing function to retrieve objects from json file"""
-import json
+"""
+Module 10-class_to_json
+Contains function that
+returns dictionary description with simple data structure
+(list, dictionary, dictionary, string)
+for JSON serialization of an object
+"""
 
 
-def load_from_json_file(filename):
-    """Load json string representing python object from file `filename`
-
+def class_to_json(obj):
+    """Returns dictionary description with simple data structure
+       (list, dictionary, dictionary, string)
+       for JSON serialization of an object
     Args:
-        filename (str): name of file containing json string
-
-    Returns: object saved by json file
+        obj: python object
     """
-    with open(filename, 'r') as f:
-        return json.load(f)
+    return obj.__dict__
