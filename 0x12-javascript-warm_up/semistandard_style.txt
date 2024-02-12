@@ -1,0 +1,57 @@
+Key Rules of semi-standard Style:
+Semicolons Required: Every statement must be terminated with a semicolon. This contrasts with the original Standard Style, which omits semicolons.
+
+javascript
+Copy code
+const name = 'JavaScript'; // Correct in semi-standard
+2 Spaces for Indentation: Use two spaces for indenting code, not tabs.
+
+javascript
+Copy code
+if (true) {
+  console.log('Hello, world!');
+}
+Single Quotes for Strings: Use single quotes for string literals unless you are using interpolation or avoiding escape characters.
+
+javascript
+Copy code
+const greeting = 'Hello, world!';
+No Unused Variables: All declared variables must be used.
+
+javascript
+Copy code
+function greet(name) {
+  console.log(`Hello, ${name}!`); // 'name' must be used if it's declared
+}
+Space Before Function Parentheses: Include a space before the opening parenthesis in function declarations.
+
+javascript
+Copy code
+function greet () {
+  console.log('Hello, world!');
+}
+No Trailing Spaces: Lines should not end with whitespace.
+
+Use === and !== Over == and !=: Always use strict equality operators unless you have a specific reason to use type-coercing equivalents.
+
+javascript
+Copy code
+if (a === b) {
+  // Do something
+}
+CamelCase for Variable and Function Names: Use camelCase when naming objects, functions, and instances.
+
+javascript
+Copy code
+const myVariable = true;
+function myFunction() {}
+Capitalized Constructor Names: Use PascalCase for constructor names.
+
+javascript
+Copy code
+function MyConstructor() {}
+No Multiple Blank Lines: Avoid using multiple blank lines to pad your code.
+
+These are some of the core rules that define the semi-standard style. The goal of these conventions is to ensure that code is clean, readable, and consistent across different projects. By adhering to these rules, developers can avoid common pitfalls in JavaScript and produce code that is easier to maintain and understand.
+
+To enforce these rules in a project, developers typically integrate semi-standard into their development workflow using tools like linters in their code editor or IDE, and as part of their build or continuous integration processes. This integration provides real-time feedback and can automatically fix many of the stylistic and some functional issues in JavaScript code.
