@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 The uppercase function convert from lower to upper.
 

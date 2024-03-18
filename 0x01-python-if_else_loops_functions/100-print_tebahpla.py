@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for c in range(ord('z'), ord('a') - 1, -2):
-    print("{:c}{:s}".format(c, chr(c - 33)), end="")
+for x in range(122, 96, -1):
+    print(f'{chr(x).upper() if (x % 2) != 0 else chr(x)}', end='')
