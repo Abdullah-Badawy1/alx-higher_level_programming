@@ -1,9 +1,21 @@
 #!/usr/bin/python3
+
+"""
+The uppercase function convert from lower to upper.
+
+Args:
+    str (string) :the string which should be converted.
+
+Return:
+    return string after convertion.
+"""
+
+
 def uppercase(str):
     for c in str:
-        if ord(c) >= ord('a') and ord(c) <= ord('z'):
-            char = chr(ord(c) - 32)
+        if ord('a') <= ord(c) <= ord('z'):
+            char = chr(ord(c)).upper()
         else:
             char = c
-        print("{:s}".format(char), end="")
+        print(f"{char}", end="")
     print('')
